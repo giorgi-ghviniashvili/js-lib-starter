@@ -1,0 +1,36 @@
+{
+  "name": "js-lib-starter",
+  "version": "1.0.0",
+  "description": "javascript library starter template",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgi-ghviniashvili/js-lib-starter.git"
+  },
+  "keywords": [
+    "js-template",
+    "chart-template",
+    "npm-lib"
+  ],
+  "author": "Giorgi Ghviniashvili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgi-ghviniashvili/js-lib-starter/issues"
+  },
+  "homepage": "https://github.com/giorgi-ghviniashvili/js-lib-starter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.32.0",
+    "jest": "^27.1.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
