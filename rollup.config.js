@@ -7,21 +7,24 @@ export default [
   {
     // UMD
     input,
-    external: ['d3-array'],
+    external: ['d3-array'], // saying that you requiring d3-array
     plugins: [
       nodeResolve(),
       babel({
         babelHelpers: 'bundled',
       }),
-      terser(),
+      // terser(),
     ],
     output: {
       file: `dist/${pkg.name}.min.js`,
       format: 'umd',
-      name: 'd3-package', // this is the name of the global object
+      name: 'myChart', // this is the name of the global object
       esModule: false,
       exports: 'named',
       sourcemap: true,
+      globals: {
+        "d3-array": "d3" // d3-array references to d3
+      }
     },
   },
   // ESM and CJS
@@ -35,6 +38,7 @@ export default [
         format: 'esm',
         exports: 'named',
         sourcemap: true,
+       
       },
       {
         dir: 'dist/cjs',
