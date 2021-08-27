@@ -12,4 +12,8 @@ describe('Testing Library', () => {
     expect(utils.add(1, 1)).toBe(2);
   })
 
+  it('Sums correctly using d3.sum', () => {
+    expect(chart.sum(1, 2, 3)).toBe(6);
+  })
+
 });

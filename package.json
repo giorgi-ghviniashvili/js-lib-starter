@@ -2,7 +2,7 @@
   "name": "js-lib-starter",
   "version": "1.0.0",
   "description": "javascript library starter template",
-  "main": "dist/index.js",
+  "main": "dist/d3-chart-module.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
@@ -30,7 +30,12 @@
     "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
     "jest": "^27.1.0",
+    "rollup": "^2.56.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "d3-array": "^3.0.2"
   }
 }

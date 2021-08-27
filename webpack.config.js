@@ -1,10 +1,11 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'd3-chart-module.js',
     library: {
       type: "umd",
       name: "d3Chart"
@@ -27,4 +28,10 @@ module.exports = {
   },
   mode: 'development',
   devtool: 'source-map',
+  optimization: {
+    minimize: true,
+    minimizer: [new UglifyJsPlugin({
+      test: /\.js(\?.*)?$/i,
+    })],
+  },
 };

@@ -1,3 +1,5 @@
+import {sum} from "d3-array";
+
 class Chart {
   constructor() {
 
@@ -5,6 +7,10 @@ class Chart {
 
   render() {
     return "hey";
+  }
+
+  sum() {
+    return sum(arguments);
   }
 }
 
