@@ -2,11 +2,12 @@
   "name": "js-lib-starter",
   "version": "1.0.0",
   "description": "javascript library starter template",
-  "main": "dist/d3-chart-module.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch",
-    "test": "jest"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -26,16 +27,15 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "eslint": "^7.32.0",
-    "jest": "^27.1.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "rollup": "^2.56.3",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0"
+    "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
-    "d3-array": "^3.0.2"
-  }
+    "d3": "^7.0.1"
+  },
+  "files": [
+    "dist"
+  ]
 }
